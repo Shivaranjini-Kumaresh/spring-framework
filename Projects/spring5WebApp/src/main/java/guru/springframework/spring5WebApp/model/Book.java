@@ -57,4 +57,48 @@ public class Book {
 		this.publisher = publisher;
 	}
 
+	public Set<Author> getAuthors() {
+		return authors;
+	}
+
+	public void setAuthors(Set<Author> authors) {
+		this.authors = authors;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((authors == null) ? 0 : authors.hashCode());
+		result = prime * result + ((bookName == null) ? 0 : bookName.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Book other = (Book) obj;
+		if (authors == null) {
+			if (other.authors != null)
+				return false;
+		} else if (!authors.equals(other.authors))
+			return false;
+		if (bookName == null) {
+			if (other.bookName != null)
+				return false;
+		} else if (!bookName.equals(other.bookName))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Book [id=" + id + ", bookName=" + bookName + ", authors=" + authors + "]";
+	}
+
 }
