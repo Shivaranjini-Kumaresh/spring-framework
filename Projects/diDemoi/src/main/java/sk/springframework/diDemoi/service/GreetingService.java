@@ -1,6 +1,6 @@
 package sk.springframework.diDemoi.service;
 
-public interface IGreetingService {
+public interface GreetingService {
 	
 	String sayHello();
 

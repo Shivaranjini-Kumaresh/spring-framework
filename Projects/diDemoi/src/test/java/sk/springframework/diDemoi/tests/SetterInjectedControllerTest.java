@@ -7,13 +7,13 @@ import org.junit.Test;
 
 import sk.springframework.diDemoi.controller.SetterInjectedController;
 import sk.springframework.diDemoi.service.GreetingServiceImpl;
-import sk.springframework.diDemoi.service.IGreetingService;
+import sk.springframework.diDemoi.service.GreetingService;
 
 public class SetterInjectedControllerTest {
 
 	private SetterInjectedController setterController;
 
-	IGreetingService greetingService;
+	GreetingService greetingService;
 
 	@Before
 	public void setUp() {

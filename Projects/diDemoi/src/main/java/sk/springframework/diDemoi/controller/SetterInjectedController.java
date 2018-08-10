@@ -4,20 +4,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
-import sk.springframework.diDemoi.service.IGreetingService;
+import sk.springframework.diDemoi.service.GreetingService;
 
 @Controller
 public class SetterInjectedController {
 
-	private IGreetingService greetingService;
+	private GreetingService greetingService;
 
-	public IGreetingService getGreetingService() {
+	public GreetingService getGreetingService() {
 		return greetingService;
 	}
 
 	@Autowired
 	@Qualifier("setterGreetingService")
-	public void setGreetingService(IGreetingService greetingService) {
+	public void setGreetingService(GreetingService greetingService) {
 		this.greetingService = greetingService;
 	}
 
